@@ -13,7 +13,7 @@ Gambar PDA-nya sebagai berikut:
 
 <img width="737" height="500" alt="image" src="pda-diagram.png" />
 
-Contoh string yang bisa diterima adalah: $\lambda$ (null string), aa, abba
+Contoh string yang bisa diterima adalah: $\lambda$ (null string), aa, abba \
 Contoh string yang bisa ditolak adalah: a, b, ab
 
 UI Aplikasi PDA Simulator sebagai berikut:
