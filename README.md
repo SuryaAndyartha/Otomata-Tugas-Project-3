@@ -1,9 +1,9 @@
 # Tugas Proyek 3 Otomata B
 
-| Name | NRP |
-| --- | --- | 
-| Willy Dava Nugraha | 5025241090 | 
-| Nyoman Surya Hutama Andyartha | 5025241093 |
+| Name | NRP | Pembagian Tugas |
+| --- | --- | --- |
+| Willy Dava Nugraha | 5025241090 | Logika PDA |
+| Nyoman Surya Hutama Andyartha | 5025241093 | Mengembangkan UI |
 
 PDA diambil dari referensi DFA pada soal mingguan 7 nomor 1 sebagai berikut:
 
