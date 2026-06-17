@@ -17,3 +17,4 @@ Contoh string yang bisa diterima adalah: $\lambda$ (null string), aa, abba
 Contoh string yang bisa ditolak adalah: a, b, ab
 
 UI Aplikasi PDA Simulator sebagai berikut:
+<img width="605" height="922" alt="Screenshot 2026-06-17 at 18 07 58" src="https://github.com/user-attachments/assets/84172fd7-f818-4276-8175-2a3ead601997" />
