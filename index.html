@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PDA Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>PDA Simulator</h1>
+  <p>Simulasi Pushdown Automaton dengan trace eksekusi.</p>
+</header>
+
+<div class="container">
+  <!-- Diagram PDA -->
+  <div class="card">
+    <div class="card-header">Diagram PDA</div>
+    <div class="card-body">
+      <img src="pda-diagram.png" alt="Diagram PDA" class="pda-image" />
+    </div>
+  </div>
+
+  <!-- Input & Trace -->
+  <div>
+    <div class="card" style="margin-bottom:1.25rem;">
+      <div class="card-header">
+        <span>Input String</span>
+      </div>
+      <div class="card-body">
+
+        <div class="input-row">
+          <input
+            type="text"
+            id="pda-input"
+            placeholder="Masukkan string (misal: aabb, abba, aa)..."
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+          />
+          <button class="btn-run" onclick="run()">▶ Jalankan</button>
+          <button class="btn-clear" onclick="clearAll()">Reset</button>
+        </div>
+
+        <div class="examples">
+          <label>Contoh:</label>
+          <span class="chip" onclick="setAndRun('')">(kosong)</span>
+          <span class="chip" onclick="setAndRun('aa')">aa</span>
+          <span class="chip" onclick="setAndRun('bb')">bb</span>
+          <span class="chip" onclick="setAndRun('abba')">abba</span>
+          <span class="chip" onclick="setAndRun('aabb')">aabb</span>
+          <span class="chip" onclick="setAndRun('ab')">ab</span>
+          <span class="chip" onclick="setAndRun('aab')">aab</span>
+          <span class="chip" onclick="setAndRun('abab')">abab</span>
+          <span class="chip" onclick="setAndRun('baa')">baa</span>
+        </div>
+
+        <div id="result-badge"></div>
+
+        <div id="trace-section">
+          <div class="trace-title">Trace Eksekusi</div>
+          <div style="overflow-x:auto;">
+            <table class="trace-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>State</th>
+                  <th>Sisa Input</th>
+                  <th>Stack (top→bottom)</th>
+                  <th>Simbol Dibaca</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="trace-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Stack Sidebar -->
+  <div>
+    <div class="card" style="margin-bottom:1.25rem;">
+      <div class="card-header">
+        <span>Stack Saat Ini</span>
+      </div>
+      <div class="card-body">
+        <div class="section-label" style="font-size:10px;color:var(--muted);margin-bottom:6px;">↑ top</div>
+        <div id="stack-viz" class="stack-viz">
+          <div class="stack-cell bottom">λ (bottom)</div>
+        </div>
+        <div class="section-label" style="font-size:10px;color:var(--muted);margin-top:6px;text-align:right;">↓ bottom</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
